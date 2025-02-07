@@ -1,4 +1,4 @@
 package org.BIDATA.project.wrap;
 
-public class WrapSelectionTextCommand {
+public class WrapSelectionTextCommand extends WrapTextCommand {
 }

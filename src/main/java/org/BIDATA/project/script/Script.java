@@ -1,4 +1,4 @@
 package org.BIDATA.project.script;
 
-public class script {
+public class Script {
 }

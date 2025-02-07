@@ -1,4 +1,4 @@
 package org.BIDATA.project.wrap;
 
-public class WrapLinesTextCommand {
+public class WrapLinesTextCommand extends WrapTextCommand {
 }

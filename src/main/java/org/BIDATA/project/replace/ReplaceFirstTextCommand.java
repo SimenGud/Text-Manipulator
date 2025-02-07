@@ -1,4 +1,4 @@
 package org.BIDATA.project.replace;
 
-public class ReplaceFirstTextCommand {
+public class ReplaceFirstTextCommand extends ReplaceTextCommand {
 }

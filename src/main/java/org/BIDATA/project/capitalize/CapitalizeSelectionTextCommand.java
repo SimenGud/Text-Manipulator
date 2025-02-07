@@ -1,4 +1,4 @@
 package org.BIDATA.project.capitalize;
 
-public class CapitalizeSelectionTextCommand {
+public class CapitalizeSelectionTextCommand extends CapitalizeTextCommand {
 }
