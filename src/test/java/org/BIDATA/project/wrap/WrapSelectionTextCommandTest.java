@@ -3,7 +3,7 @@ package org.BIDATA.project.wrap;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class WrapSelectionTextCommandTest {
+class WrapSelectionTextCommandTest {
 
   @Test
   void testWrapSelection() {
