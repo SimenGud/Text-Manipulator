@@ -35,9 +35,18 @@ public class WrapLinesTextCommand extends WrapTextCommand {
   @Override
   public String execute(String text) {
     String[] lines = text.split("\n");
-    return Arrays.stream(lines)
-        .map(super::execute)
-        .collect(Collectors.joining("\n"));
+
+    String result = "";
+
+    for (int i = 0; i < lines.length; i++) {
+      result = result + start + lines[i] + end;
+
+      if (i < lines.length - 1) {
+        result = result + "\n";
+      }
+    }
+
+    return result;
   }
 }
 
