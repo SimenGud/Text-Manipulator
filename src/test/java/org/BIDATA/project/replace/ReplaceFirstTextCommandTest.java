@@ -8,7 +8,11 @@ public class ReplaceFirstTextCommandTest {
 
   @Test
   void testReplace() {
-    TextCommand cmd = new ReplaceFirstTextCommand("one", "two");
-    assertEquals("text with two and one", cmd.execute("text with one and one"));
+    ReplaceTextCommand command = new ReplaceFirstTextCommand("one", "two");
+
+    String input = "text with one and one";
+    String expectedOutput = "text with two and one";
+
+    assertEquals(expectedOutput, command.execute(input));
   }
 }
