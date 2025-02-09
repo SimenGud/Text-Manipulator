@@ -1,6 +1,5 @@
 package org.BIDATA.project.replace;
 
-import org.BIDATA.project.text.TextCommand;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,10 +7,10 @@ public class ReplaceFirstTextCommandTest {
 
   @Test
   void testReplace() {
-    ReplaceTextCommand command = new ReplaceFirstTextCommand("one", "two");
+    ReplaceTextCommand command = new ReplaceFirstTextCommand("target", "replacement");
 
-    String input = "text with one and one";
-    String expectedOutput = "text with two and one";
+    String input = "text with target and target";
+    String expectedOutput = "text with replacement and target";
 
     assertEquals(expectedOutput, command.execute(input));
   }

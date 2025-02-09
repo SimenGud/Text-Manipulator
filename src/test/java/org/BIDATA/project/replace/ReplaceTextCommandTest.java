@@ -7,10 +7,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class ReplaceTextCommandTest {
   @Test
   void testReplace() {
-    TextCommand command = new ReplaceTextCommand("one", "two");
+    TextCommand command = new ReplaceTextCommand("target", "replacement");
 
-    String input = "text with one and one";
-    String expectedOutput = "text with two and two";
+    String input = "text with target and target";
+    String expectedOutput = "text with replacement and replacement";
 
     assertEquals(expectedOutput, command.execute(input));
   }
