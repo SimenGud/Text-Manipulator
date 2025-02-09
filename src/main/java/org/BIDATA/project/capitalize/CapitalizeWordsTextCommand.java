@@ -22,7 +22,7 @@ public class CapitalizeWordsTextCommand extends CapitalizeTextCommand {
   @Override
   public String execute(String text) {
     if (text == null || text.isEmpty()) {
-      throw new IllegalArgumentException("Need text to wrap");
+      throw new IllegalArgumentException("Need text to capitalize");
     }
 
     StringBuilder result = new StringBuilder();
