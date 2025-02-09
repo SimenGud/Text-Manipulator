@@ -41,10 +41,6 @@ public class CapitalizeSelectionTextCommand extends CapitalizeTextCommand {
       return text;
     }
 
-    String capitalizedSelection = super.execute(selection);
-
-    String regex = "\\b" + Pattern.quote(selection) + "\\b";
-
-    return text.replaceAll(regex, capitalizedSelection);
+    return text.replaceAll("\\b" + Pattern.quote(selection) + "\\b", super.execute(selection));
   }
 }

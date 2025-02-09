@@ -8,7 +8,7 @@ class CapitalizeSelectionTextCommandTest {
   @Test
   void CapitalizeSelectionTextCommand() {
 
-    CapitalizeTextCommand command = new CapitalizeSelectionTextCommand("selection"); //TODO: Fix the method
+    CapitalizeTextCommand command = new CapitalizeSelectionTextCommand("selection");
 
     String input = "text with selection and another selection";
     String expectedOutput = "text with Selection and another Selection";
