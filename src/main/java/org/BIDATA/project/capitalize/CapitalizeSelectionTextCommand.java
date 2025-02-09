@@ -35,7 +35,7 @@ public class CapitalizeSelectionTextCommand extends CapitalizeTextCommand {
    * Capitalizes the selected text in the input text.
    *
    * @param text the text to be modified
-   * @return
+   * @return the selected text capitalized
    */
 
   @Override
