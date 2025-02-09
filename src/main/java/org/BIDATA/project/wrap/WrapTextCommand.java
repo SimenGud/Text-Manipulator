@@ -21,6 +21,11 @@ public class WrapTextCommand implements TextCommand {
    */
 
   public WrapTextCommand(String start, String end) {
+
+    if (start == null || start.isEmpty() || end == null || end.isEmpty()) {
+      throw new IllegalArgumentException("Start or end cannot be null");
+    }
+
     this.start = start;
     this.end = end;
   }
