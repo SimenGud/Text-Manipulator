@@ -34,19 +34,11 @@ public class WrapLinesTextCommand extends WrapTextCommand {
 
   @Override
   public String execute(String text) {
-    String[] lines = text.split("\n");
-
-    String result = "";
-
-    for (int i = 0; i < lines.length; i++) {
-      result = result + start + lines[i] + end;
-
-      if (i < lines.length - 1) {
-        result = result + "\n";
-      }
+    if (text == null || text.isEmpty()) {
+      return text;
     }
 
-    return result;
+    return text.replaceAll("(?m)^(.*)$", "<p>$1</p>");
   }
 }
 
