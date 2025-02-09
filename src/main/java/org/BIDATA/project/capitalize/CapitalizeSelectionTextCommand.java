@@ -25,6 +25,9 @@ public class CapitalizeSelectionTextCommand extends CapitalizeTextCommand {
    */
 
   public CapitalizeSelectionTextCommand(String selection) {
+    if (selection == null || selection.isEmpty()) {
+      throw new IllegalArgumentException("Selection cannot be null or empty");
+    }
     this.selection = selection;
   }
 
