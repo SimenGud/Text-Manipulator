@@ -19,6 +19,9 @@ public class Script implements TextCommand {
    */
 
   public Script(List<TextCommand> commands) {
+    if (commands == null || commands.isEmpty()) {
+      throw new IllegalArgumentException("Commands cannot be null or empty");
+    }
     this.commands = commands;
   }
 
