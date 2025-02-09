@@ -25,6 +25,11 @@ public class WrapSelectionTextCommand extends WrapTextCommand {
 
   public WrapSelectionTextCommand(String start, String end, String selection) {
     super(start, end);
+
+    if (selection == null || selection.isEmpty()) {
+      throw new IllegalArgumentException("Selection cannot be null");
+    }
+
     this.selection = selection;
   }
 
@@ -37,6 +42,11 @@ public class WrapSelectionTextCommand extends WrapTextCommand {
 
   @Override
   public String execute(String text) {
+
+    if (text == null || text.isEmpty()) {
+      return text;
+    }
+
     return text.replaceFirst(selection, start + selection + end);
   }
 }
