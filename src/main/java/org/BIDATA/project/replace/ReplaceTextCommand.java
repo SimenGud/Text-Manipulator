@@ -35,6 +35,9 @@ public class ReplaceTextCommand implements TextCommand {
 
   @Override
   public String execute(String text) {
+    if (text == null || text.isEmpty()) {
+      throw new IllegalArgumentException("Need text to replace");
+    }
     return text.replaceAll(target, replacement);
   }
 }

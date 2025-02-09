@@ -41,7 +41,7 @@ public class CapitalizeSelectionTextCommand extends CapitalizeTextCommand {
   @Override
   public String execute(String text) {
     if (text == null || text.isEmpty()) {
-      return text;
+      throw new IllegalArgumentException("Need text to wrap");
     }
 
     return text.replaceAll("\\b" + Pattern.quote(selection) + "\\b", super.execute(selection));

@@ -44,7 +44,7 @@ public class WrapSelectionTextCommand extends WrapTextCommand {
   public String execute(String text) {
 
     if (text == null || text.isEmpty()) {
-      return text;
+      throw new IllegalArgumentException("Need text to wrap");
     }
 
     return text.replaceFirst(selection, start + selection + end);

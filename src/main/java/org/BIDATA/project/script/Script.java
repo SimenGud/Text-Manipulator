@@ -34,6 +34,10 @@ public class Script implements TextCommand {
 
   @Override
   public String execute(String text) {
+    if (text == null || text.isEmpty()) {
+      throw new IllegalArgumentException("Need text to wrap");
+    }
+
     for (TextCommand command : commands) {
       text = command.execute(text);
     }

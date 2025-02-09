@@ -34,8 +34,9 @@ public class WrapLinesTextCommand extends WrapTextCommand {
 
   @Override
   public String execute(String text) {
+
     if (text == null || text.isEmpty()) {
-      return text;
+      throw new IllegalArgumentException("Need text to wrap");
     }
 
     return text.replaceAll("(?m)^(.*)$", "<p>$1</p>");

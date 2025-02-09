@@ -20,7 +20,7 @@ public class CapitalizeWordsTextCommand extends CapitalizeTextCommand {
   @Override
   public String execute(String text) {
     if (text == null || text.isEmpty()) {
-      return text;
+      throw new IllegalArgumentException("Need text to wrap");
     }
 
     StringBuilder result = new StringBuilder(); //TODO: Not sure if this is the best way to do this. Look into alternatives.
