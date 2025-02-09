@@ -39,6 +39,11 @@ public class WrapTextCommand implements TextCommand {
 
   @Override
   public String execute(String text) {
+
+    if (text == null || text.isEmpty()) {
+      throw new IllegalArgumentException("Need text to wrap");
+    }
+
     return start + text + end;
   }
 }
