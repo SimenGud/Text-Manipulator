@@ -3,7 +3,7 @@ package org.BIDATA.project.replace;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ReplaceFirstTextCommandTest {
+class ReplaceFirstTextCommandTest {
 
   @Test
   void testReplace() {
