@@ -7,10 +7,10 @@ class WrapSelectionTextCommandTest {
 
   @Test
   void testWrapSelection() {
-    WrapTextCommand command = new WrapSelectionTextCommand("<p>", "</p>", "test");
+    WrapTextCommand command = new WrapSelectionTextCommand("<p>", "</p>", "selection");
 
-    String input = "This is test text.";
-    String expectedOutput = "This is <p>test</p> text.";
+    String input = "text with selection";
+    String expectedOutput = "text with <p>selection</p>";
 
     assertEquals(expectedOutput, command.execute(input));
   }
