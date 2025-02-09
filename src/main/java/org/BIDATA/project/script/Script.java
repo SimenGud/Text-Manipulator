@@ -1,7 +1,7 @@
 package org.BIDATA.project.script;
 
-import org.BIDATA.project.text.TextCommand;
 import java.util.List;
+import org.BIDATA.project.text.TextCommand;
 
 /** This class is responsible for executing a list of commands.
  *

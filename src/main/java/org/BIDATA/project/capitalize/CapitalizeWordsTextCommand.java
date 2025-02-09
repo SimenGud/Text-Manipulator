@@ -4,8 +4,8 @@ package org.BIDATA.project.capitalize;
  * A subclass of CapitalizeTextCommand that capitalizes
  * the first letter of each word in the input text.
  *
- * @version 0.1
  * @author Simen
+ * @version 0.1
  */
 
 public class CapitalizeWordsTextCommand extends CapitalizeTextCommand {

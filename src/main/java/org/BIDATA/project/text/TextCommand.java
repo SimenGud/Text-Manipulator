@@ -7,6 +7,5 @@ package org.BIDATA.project.text;
  * @author Simen
  */
 
-public interface TextCommand {
-    String execute(String text);
+public interface TextCommand { String execute(String text);
 }

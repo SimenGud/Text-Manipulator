@@ -1,9 +1,8 @@
 package org.BIDATA.project.client;
 
+import java.util.Scanner;
 import org.BIDATA.project.capitalize.CapitalizeWordsTextCommand;
 import org.BIDATA.project.text.TextCommand;
-
-import java.util.Scanner;
 
 /**
  * A simple terminal client for the CapitalizeWordsTextCommand for proof of concept.
@@ -13,6 +12,12 @@ import java.util.Scanner;
  */
 
 public class TerminalClient {
+
+  /**
+   * Main method for the TerminalClient.
+   *
+   * @param args the command line arguments
+   */
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     System.out.println("Enter a string: ");
