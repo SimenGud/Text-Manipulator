@@ -7,7 +7,7 @@ import org.BIDATA.project.text.TextCommand;
 class WrapTextCommandTest {
 
   @Test
-  void WrapTextCommand() {
+  void WrapText() {
 
     TextCommand command = new WrapTextCommand("<p>", "</p>");
 
@@ -15,6 +15,43 @@ class WrapTextCommandTest {
     String expectedOutput = "<p>This is a test.</p>";
 
     assertEquals(expectedOutput, command.execute(input));
+  }
 
+  @Test
+  void negativeWrapText() {
+
+    TextCommand command = new WrapTextCommand("<p>", "</p>");
+
+    String input = "This is a test.";
+    String expectedOutput = "This is a test.";
+
+    assertNotEquals(expectedOutput, command.execute(input));
+  }
+
+  @Test
+  void WrapTextEmptyWrapOne() {
+
+    assertThrows(IllegalArgumentException.class, () -> {
+      TextCommand command = new WrapTextCommand("", "</p>");
+      command.execute("This is a test.");
+    });
+  }
+
+  @Test
+  void WrapTextEmptyWrapTwo() {
+
+    assertThrows(IllegalArgumentException.class, () -> {
+      TextCommand command = new WrapTextCommand("<p>", "");
+      command.execute("This is a test.");
+    });
+  }
+
+  @Test
+  void WrapTextEmptyText() {
+
+    assertThrows(IllegalArgumentException.class, () -> {
+      TextCommand command = new WrapTextCommand("<p>", "</p>");
+      command.execute("");
+    });
   }
 }
