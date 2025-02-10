@@ -24,5 +24,32 @@ class ReplaceTextCommandTest {
 
     assertNotEquals(expectedOutput, command.execute(input));
   }
+
+  @Test
+  void testReplaceTestExceptionEmptyReplacement() {
+    assertThrows(IllegalArgumentException.class, () -> {
+      TextCommand command = new ReplaceTextCommand("target", "");
+      String input = "text with target and target";
+      command.execute(input);
+    });
+  }
+
+  @Test
+  void testReplaceTestExceptionEmptyTarget() {
+    assertThrows(IllegalArgumentException.class, () -> {
+      TextCommand command = new ReplaceTextCommand("", "replacement");
+      String input = "text with target and target";
+      command.execute(input);
+    });
+  }
+
+  @Test
+  void testReplaceTestExceptionEmptyText() {
+    assertThrows(IllegalArgumentException.class, () -> {
+      TextCommand command = new ReplaceTextCommand("target", "replacement");
+      String input = "";
+      command.execute(input);
+    });
+  }
 }
 

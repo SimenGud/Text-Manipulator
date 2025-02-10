@@ -22,6 +22,9 @@ public class ReplaceTextCommand implements TextCommand {
    */
 
   public ReplaceTextCommand(String target, String replacement) {
+    if (target == null || target.isEmpty() || replacement == null || replacement.isEmpty()) {
+      throw new IllegalArgumentException("Target or replacement cannot be null");
+    }
     this.target = target;
     this.replacement = replacement;
   }
