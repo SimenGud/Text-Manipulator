@@ -14,5 +14,15 @@ class ReplaceTextCommandTest {
 
     assertEquals(expectedOutput, command.execute(input));
   }
+
+  @Test
+  void negativeTestReplace() {
+    TextCommand command = new ReplaceTextCommand("target", "replacement");
+
+    String input = "text with target and target";
+    String expectedOutput = "text with target and target";
+
+    assertNotEquals(expectedOutput, command.execute(input));
+  }
 }
 
