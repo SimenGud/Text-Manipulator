@@ -36,7 +36,7 @@ class WrapLinesTextCommandTest {
   }
 
   @Test
-  void WrapLinesEmptyWrapOne() {
+  void WrapLinesEmptyWrapStart() {
     assertThrows(IllegalArgumentException.class, () -> {
       WrapLinesTextCommand command = new WrapLinesTextCommand("", "</p>");
       command.execute("first line\nsecond line");
@@ -44,7 +44,7 @@ class WrapLinesTextCommandTest {
   }
 
   @Test
-  void WrapLinesEmptyWrapTwo() {
+  void WrapLinesEmptyWrapEnd() {
     assertThrows(IllegalArgumentException.class, () -> {
       WrapLinesTextCommand command = new WrapLinesTextCommand("<p>", "");
       command.execute("first line\nsecond line");

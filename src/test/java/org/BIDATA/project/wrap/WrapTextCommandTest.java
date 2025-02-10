@@ -29,7 +29,7 @@ class WrapTextCommandTest {
   }
 
   @Test
-  void WrapTextEmptyWrapOne() {
+  void WrapTextEmptyWrapStart() {
 
     assertThrows(IllegalArgumentException.class, () -> {
       TextCommand command = new WrapTextCommand("", "</p>");
@@ -38,7 +38,7 @@ class WrapTextCommandTest {
   }
 
   @Test
-  void WrapTextEmptyWrapTwo() {
+  void WrapTextEmptyWrapEnd() {
 
     assertThrows(IllegalArgumentException.class, () -> {
       TextCommand command = new WrapTextCommand("<p>", "");

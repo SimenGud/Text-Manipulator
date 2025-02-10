@@ -36,7 +36,7 @@ class WrapSelectionTextCommandTest {
   }
 
   @Test
-  void WrapSelectionEmptyWrapOne() {
+  void WrapSelectionEmptyWrapStart() {
     assertThrows(IllegalArgumentException.class, () -> {
       WrapTextCommand command = new WrapSelectionTextCommand("", "</p>", "selection");
       command.execute("text with selection");
@@ -44,7 +44,7 @@ class WrapSelectionTextCommandTest {
   }
 
   @Test
-  void WrapSelectionEmptyWrapTwo() {
+  void WrapSelectionEmptyWrapEnd() {
     assertThrows(IllegalArgumentException.class, () -> {
       WrapTextCommand command = new WrapSelectionTextCommand("<p>", "", "selection");
       command.execute("text with selection");
