@@ -35,9 +35,15 @@ public class ReplaceTextCommand implements TextCommand {
 
   @Override
   public String execute(String text) {
+
     if (text == null || text.isEmpty()) {
       throw new IllegalArgumentException("Need text to replace");
     }
+
+    if (target.equals(replacement)) {
+      throw new IllegalArgumentException("Cant replace with the same string");
+    }
+
     return text.replaceAll(target, replacement);
   }
 }
