@@ -35,6 +35,11 @@ public class ReplaceFirstTextCommand extends ReplaceTextCommand {
     if (text == null || text.isEmpty()) {
       throw new IllegalArgumentException("Need text to replace");
     }
+
+    if (target.equals(replacement)) {
+      throw new IllegalArgumentException("Cant replace with the same string");
+    }
+
     return text.replaceFirst(target, super.replacement);
   }
 }
