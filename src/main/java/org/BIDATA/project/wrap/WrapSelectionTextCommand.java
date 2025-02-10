@@ -47,6 +47,6 @@ public class WrapSelectionTextCommand extends WrapTextCommand {
       throw new IllegalArgumentException("Need text to wrap");
     }
 
-    return text.replaceFirst(selection, start + selection + end);
+    return text.replaceAll(selection, start + selection + end);
   }
 }
